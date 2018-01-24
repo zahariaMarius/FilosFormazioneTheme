@@ -1,0 +1,143 @@
+/* GENERALI */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  line-height: 1.5em;
+  font-family: 'Helvetiva Neue', Helvetica, Arial;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* PAGE WRAPPER */
+.page-wrapper, .footer-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* HEADER */
+
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.header-logo {
+  float: left;
+  height: 100px;
+}
+
+.header-logo img {
+  width: 100%;
+}
+
+.header-menu {
+  float: right;
+}
+
+.header-menu:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.header-menu li {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background-color: #e74c3c;
+  font-size: 16px;
+}
+
+.header-menu li.current-menu-item {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.header-menu li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: white;
+}
+
+.header-menu li:nth-child(even) {
+  background-color: #d35400;
+}
+
+.header-menu li:nth-child(odd) {
+  background-color: #3498db;
+}
+
+.header-menu li:nth-child(1) {
+  background-color: #444444;
+}
+
+.header-menu li:nth-child(2) {
+  background-color: #27ae60;
+}
+
+.header-menu li:nth-child(3) {
+  background-color: #f39c12;
+}
+
+.header-menu li:nth-child(4) {
+  background-color: #c0392b;
+}
+
+.header-menu li:nth-child(5) {
+  background-color: #8e44ad;
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: #222222;
+  color: white;
+  padding: 40px 0;
+}
+
+.footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer .footer-section {
+  float: left;
+  width: 25%;
+}
+
+.footer .footer-section li {
+  margin-bottom: 10px;
+}
+
+.footer .footer-section .footer-section-title {
+  margin-bottom: 35px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.footer .footer-section .footer-logo {
+  display: block;
+  max-width: 100px;
+  margin: 50px auto 0;
+}
+
+/* TITOLO */
+.page-title {
+  font-size: 42px;
+  font-weight: 200;
+}
