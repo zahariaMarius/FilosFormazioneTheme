@@ -1,4 +1,4 @@
-# ITS WP Starter theme
+# FilosForazione WP Starter theme
 
 ## Tema di Wordpress, da dove si parte.
 
