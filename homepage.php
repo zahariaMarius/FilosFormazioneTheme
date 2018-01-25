@@ -2,6 +2,5 @@
 
 <?php get_header(); ?>
 
-HOMEPAGE
 
 <?php //get_footer(); ?>

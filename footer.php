@@ -1,4 +1,4 @@
- </div> <!-- Chiudo page-wrapper -->
+ </div> <!-- Chiudo page container -->
 
   <div class="footer">
     <div class="footer-wrapper">
@@ -21,6 +21,6 @@
   </div>
 
  <!-- Questa funzione di Wordpress carica tutti i tag del footer impostati da Wordpress -->
-  <?php //wp_footer(); ?>
+  <?php wp_footer(); ?>
   </body>
 </html>

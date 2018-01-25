@@ -2,14 +2,75 @@
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_mixins.scss";
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_grid.scss";
 
+$navbar-height: 94px;
+
 *, *:after, *:before {
   box-sizing: border-box;
 }
 
-.header-menu {
-  background-color: aqua;
-  float: left;
-  a{
-    background-color: brown;
+.navbar {
+  height: $navbar-height;
+  .navbar-logo {
+    .logo {
+      height: $navbar-height;
+      text-align: center;
+      img {
+        height: 100%;
+      }
+    }
   }
+
+  .navbar-menu {
+    height: 100%;
+    .header-menu {
+      width: 100%;
+      text-align: center;
+      li {
+        display: inline-block;
+        padding: 30px;
+        &.current-menu-item {
+          background-color: #1B234C;
+          a {
+            color: white;
+            font-weight: bold;
+            &:hover {
+              color: white;
+              font-weight: bold;
+            }
+          }
+        }
+        a {
+          font-family: Monserrat Regular;
+          font-size: 26pt;
+          color: #1B234C;
+          text-decoration: none;
+          &:hover {
+            color: #283471;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-extra {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    .button-information {
+      width: 258px;
+      height: 60px;
+      border-radius: 10px;
+      background-color: #19919F;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 60px;
+      span {
+        font-size: 16pt;
+        color: white;
+      }
+    }
+  }
+
 }

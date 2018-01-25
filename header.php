@@ -1,13 +1,13 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
-	<head>
-		<meta charset="<?php bloginfo('charset'); ?>">
+  <head>
+    <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
 
-		<!-- Generate favicon, apple touch icons and Windows Phone icon at http://realfavicongenerator.net/ -->
+    <!-- Generate favicon, apple touch icons and Windows Phone icon at http://realfavicongenerator.net/ -->
     <!-- Esempio: -->
-    <!-- <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon-32x32.png" sizes="32x32"> -->
+    <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon-32x32.png" sizes="32x32">
 
     <!-- Questo pezzo di codice permette di impostare l'immagine per facebook e twitter se ci si trova in una pagina con featured image impostata da backoffice -->
     <?php $page_image = $post ? get_the_post_thumbnail_url($post, 'huge') : false; ?>
@@ -17,20 +17,26 @@
     <?php endif ?>
 
     <!-- Questa funzione di Wordpress carica tutti i tag della head impostati da Wordpress -->
-		<?php wp_head(); ?>
-	</head>
+    <?php wp_head(); ?>
+  </head>
 
   <!-- La funzione di Wordpress body_class() aggiunge al body delle classi specifiche in base alla pagina sulla quale ci si trova -->
   <!-- Questo permette di stylare con il css specificatamente elementi di diverse pagine -->
-	<body <?php body_class(); ?>>
+  <body <?php body_class(); ?>>
 
-  <div class="page-wrapper"> <!-- Apro page-wrapper -->
-
-		<div class="header">
-			<div class="header-title">
-    </div>
-
-    
-    <?php header_menu(); ?>
-
-	  </div>
+  <div class="container-fluid"> <!-- Apro page-container -->
+	<div class="row navbar">
+		<div class="col-lg-2 navbar-logo">
+			<figure class="logo">
+				<img src="<?php echo get_template_directory_uri(); ?>/imgs/logo.png" alt="Filos Formazione Logo">
+			<figure>
+		</div>
+		<div class="col-lg-8 navbar-menu">
+			<?php header_menu(); ?>
+		</div>
+		<div class="col-lg-2 navbar-extra">
+			<div class="button-information">
+				<span>Richiedi informazioni</span>
+			</div>
+		</div>
+	</div>
