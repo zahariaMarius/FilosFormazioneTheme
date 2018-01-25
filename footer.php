@@ -15,12 +15,12 @@
         <?php // footer_menu_3(); ?>
       </div>
       <div class="footer-section">
-        <img class="footer-logo" src="<?php echo get_template_directory_uri(); ?>/imgs/logo.png" alt="">
+        <img class="footer-logo" src=" <?php //echo get_template_directory_uri(); ?>/imgs/logo.png" alt="">
       </div>
     </div>
   </div>
 
  <!-- Questa funzione di Wordpress carica tutti i tag del footer impostati da Wordpress -->
-  <?php wp_footer(); ?>
+  <?php //wp_footer(); ?>
   </body>
 </html>
