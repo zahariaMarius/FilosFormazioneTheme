@@ -1,0 +1,39 @@
+{
+  "name": "filos-wp-theme",
+  "version": "1.0.0",
+  "description": "Filos formazione themes",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp watch",
+    "build": "gulp build --prod",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zahariaMarius/FilosFormazioneTheme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zahariaMarius/FilosFormazioneTheme/issues"
+  },
+  "homepage": "https://github.com/zahariaMarius/FilosFormazioneTheme#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.2.5",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-if": "^2.0.2",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-print": "^2.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^1.12.1",
+    "gulp-util": "^3.0.8",
+    "yargs": "^11.0.0"
+  },
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  }
+}

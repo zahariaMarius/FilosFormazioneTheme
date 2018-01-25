@@ -46,14 +46,13 @@ function add_css() {
   // È possibile aggiungere un file css presente nella cartella del tema
   // wp_register_style('normalize', get_template_directory_uri() . '/vendor/normalize/normalize.css', array(), null, 'all');
   // wp_enqueue_style('normalize');
-  //wp_register_style('reset_css', get_template_directory_uri() . '/vendor/reset/reset.css', array(), null, 'all');
-  //wp_enqueue_style('reset_css');
 
-  //wp_register_style('main', get_template_directory_uri() . '/css/main.css', array(), null, 'all');
-  //wp_enqueue_style('main');
+  wp_register_style('reset_css', get_template_directory_uri() . '/vendor/reset/reset.css', array(), null, 'all');
+  wp_enqueue_style('reset_css');
 
-  wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), null, 'all');
-  wp_enqueue_style('bootstrap');
+  wp_register_style('main', get_template_directory_uri() . '/css/main.min.css', array(), null, 'all');
+  wp_enqueue_style('main');
+
 
   // È possibile anche aggiungere un url remoto (es. Google Fonts)
   // wp_register_style('webfont', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700,800,900', array(), null, 'all');
@@ -77,9 +76,6 @@ function add_js() {
   // È possibile aggiungere un file js presente nella cartella del tema
   wp_register_script('main_js', get_template_directory_uri() . '/js/main.js', array('jquery'), null, true);
   wp_enqueue_script('main_js');
-
-  wp_register_script('bootstrap_js', get_template_directory_uri() . '/js/bootstrap.js', array('jquery'), null, true);
-  wp_enqueue_script('bootstrap_js');
 
   // È possibile aggiungere un url remoto (es. CDN)
   // wp_register_script('select2', 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.min.js', array('jquery'), null, true);

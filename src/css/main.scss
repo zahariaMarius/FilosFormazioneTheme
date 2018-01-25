@@ -1,0 +1,8 @@
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss";
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_mixins.scss";
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_grid.scss";
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
