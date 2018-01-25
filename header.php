@@ -28,8 +28,15 @@
 
 		<div class="header">
 			<div class="header-title">
+<<<<<<< HEAD
     </div>
 
     <?php header_menu(); ?>
 
 	  </div>
+=======
+			</div>
+      <?php header_menu(); ?>
+      
+    </div>
+>>>>>>> 2f7c0e690808767bee17ce6396a0f115005e4d76
