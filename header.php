@@ -28,7 +28,9 @@
 	<div class="row navbar">
 		<div class="col-lg-2 navbar-logo">
 			<figure class="logo">
-				<img src="<?php echo get_template_directory_uri(); ?>/imgs/logo.png" alt="Filos Formazione Logo">
+        <a href=" <?php echo get_page_link( get_option('page_on_front') ); ?> ">
+          <img src="<?php echo get_template_directory_uri(); ?>/imgs/logo.png" alt="Filos Formazione Logo">
+        </a>
 			<figure>
 		</div>
 		<div class="col-lg-8 navbar-menu">
