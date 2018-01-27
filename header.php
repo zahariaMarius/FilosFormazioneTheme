@@ -9,6 +9,10 @@
     <!-- Esempio: -->
     <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon-32x32.png" sizes="32x32">
 
+    <!-- Boostrap style -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Boostrap style -->
+    
     <!-- Questo pezzo di codice permette di impostare l'immagine per facebook e twitter se ci si trova in una pagina con featured image impostata da backoffice -->
     <?php $page_image = $post ? get_the_post_thumbnail_url($post, 'huge') : false; ?>
     <?php if ($page_image): ?>
@@ -24,21 +28,16 @@
   <!-- Questo permette di stylare con il css specificatamente elementi di diverse pagine -->
   <body <?php body_class(); ?>>
 
-  <div class="container-fluid"> <!-- Apro page-container -->
-	<div class="row navbar">
-		<div class="col-lg-2 navbar-logo">
-			<figure class="logo">
-        <a href=" <?php echo get_page_link( get_option('page_on_front') ); ?> ">
-          <img src="<?php echo get_template_directory_uri(); ?>/imgs/logo.png" alt="Filos Formazione Logo">
-        </a>
-			<figure>
-		</div>
-		<div class="col-lg-8 navbar-menu">
-			<?php header_menu(); ?>
-		</div>
-		<div class="col-lg-2 navbar-extra">
-			<div class="button-information">
-				<span>Richiedi informazioni</span>
-			</div>
-		</div>
-	</div>
+  <nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand" href="<?php echo get_page_link( get_option('page_on_front') ); ?>">
+    <img src="<?php echo get_template_directory_uri(); ?>/imgs/logo.png" alt="Filos Formazione Logo">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+    <?php header_menu(); ?>
+  </div>
+  <a class="btn btn-primary" href="#">Richiedi Informazioni</a>
+</nav>

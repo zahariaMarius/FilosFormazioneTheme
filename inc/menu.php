@@ -8,6 +8,13 @@ function register_custom_menus() {
 }
 add_action( 'init', 'register_custom_menus' );
 
+// Add a link custom class 
+function add_menuclass($ulclass) {
+    return preg_replace('/<a /', '<a class="nav-link px-4"', $ulclass);
+ }
+ add_filter('wp_nav_menu','add_menuclass');
+
+
 //////////////////////////////
 //     FUNZIONI GLOBALI     //
 //////////////////////////////
@@ -32,7 +39,7 @@ function header_menu() {
           'after'           => '',
           'link_before'     => '',
           'link_after'      => '',
-          'items_wrap'      => '<ul class="header-menu">%3$s</ul>',
+          'items_wrap'      => '<ul class="navbar-nav mr-auto">%3$s</ul>',
           'depth'           => 2,
           'walker'          => ''
       )

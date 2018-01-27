@@ -44,9 +44,7 @@ add_action( 'after_setup_theme', 'config_thumb_sizes');
 // ESEGUITA ALL'HOOK: wp_enqueue_scripts
 function add_css() {
   // È possibile aggiungere un file css presente nella cartella del tema
-  // wp_register_style('normalize', get_template_directory_uri() . '/vendor/normalize/normalize.css', array(), null, 'all');
-  // wp_enqueue_style('normalize');
-
+  
   wp_register_style('reset_css', get_template_directory_uri() . '/vendor/reset/reset.css', array(), null, 'all');
   wp_enqueue_style('reset_css');
 

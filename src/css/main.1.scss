@@ -1,0 +1,142 @@
+// functions - start
+
+@mixin print-styles($map){
+  @each $property, $value in $map {
+    #{$property}: $value;
+  }
+ }
+
+// functions - end
+
+// navbar header - start
+
+$navbar-height: 94px;
+
+$button-information: (
+  width: 258px,
+  height: 60px,
+  border-radius: 10px,
+  background-color: #19919F,
+  text-align: center,
+  vertical-align: middle,
+  line-height: 60px
+);
+
+.navbar {
+  height: $navbar-height;
+  margin-bottom: 30px;
+  .navbar-logo {
+    .logo {
+      height: $navbar-height;
+      text-align: center;
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  .navbar-menu {
+    height: 100%;
+    .header-menu {
+      width: 100%;
+      text-align: center;
+      li {
+        display: inline-block;
+        padding: 34px;
+        &.current-menu-item {
+          background-color: #1B234C;
+          a {
+            color: white;
+            font-weight: bold;
+            &:hover {
+              color: white;
+              font-weight: bold;
+            }
+          }
+        }
+        a {
+          font-family: Monserrat Regular;
+          font-size: 26px;
+          color: #1B234C;
+          text-decoration: none;
+          &:hover {
+            color: #283471;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-extra {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    .button-information {
+      @include print-styles($button-information);
+      span {
+        font-size: 16px;
+        color: white;
+      }
+    }
+  }
+
+}
+
+//  navbar header - end
+
+//section courses - start
+
+$main-cours-card: (
+  position: relative,
+  margin: 0 auto,
+  width: 420px,
+  height: 295px,
+  transition-duration: 0.4s
+);
+
+$main-cours-card-content: (
+  position: absolute,
+  width: 100%,
+  height: 100%,
+  bottom: 0,
+  color: white,
+  text-align: center,
+  text-transform: uppercase,
+  font-size: 42px,
+);
+
+.courses_section {
+  .section_title {
+    text-align: center;
+    margin-bottom: 30px;
+    span {
+      font-size: 90px;
+    }
+  }
+  .main-cours-card {
+    @include print-styles($main-cours-card);
+    .main-cours-card-image{
+      img {
+        width: 100%;
+        height: 295px;
+      }
+    }
+    .main-cours-card-content {
+      @include print-styles($main-cours-card-content);
+    }
+    .main-cours-card-icon {
+      img {
+        width: 128px;
+        height: 128px;
+        margin: 45px 0;
+      }
+    }
+    &:hover {
+      box-shadow: 0 12px 20px 0 rgba(0,0,0,0.5), 0 10px 24px 0 rgba(0,0,0,0.49);
+    }
+  }
+}
+
+//section courses - end
