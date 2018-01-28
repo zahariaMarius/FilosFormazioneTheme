@@ -30,7 +30,58 @@
   }
 }
 
-.carousel-item {
-  height: 400px;
-  background-color: black;
+
+.carousel {
+  .carousel-indicators {
+    li {
+      width: 60px;
+      height: 5px;
+    }
+  }
+  .carousel-item {
+    height: 100vh;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .carousel-caption {
+      bottom: 20%;
+      .carousel-subtitle {
+        width: 80%;
+        margin: 0 auto;
+      }
+      .carousel-button {
+        font-size: 32px;
+        padding: 8px 30px;
+        opacity: 0.8;
+        margin-top: 18%;
+      }
+    }
+  }
+  .carousel-control-prev-icon {
+    width: 120px;
+    height: 150px;
+    background-image: url('../imgs/carousel/left-arrow.png');
+  }
+  .carousel-control-next-icon {
+    width: 120px;
+    height: 150px;
+    background-image: url('../imgs/carousel/right-arrow.png');
+  }
 }
+
+.card {
+  // width: 420px;
+  // height: 295px;
+  // margin: 0 auto;
+  transition-duration: 0.4s;
+  &:hover {
+    box-shadow: 0 12px 20px 0 rgba(0,0,0,0.5), 0 10px 24px 0 rgba(0,0,0,0.49);
+  }
+}
+
+.card-img-overlay {
+  background-color: red;
+  opacity: 0.56;
+}
+
