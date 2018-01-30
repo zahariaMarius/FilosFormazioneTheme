@@ -116,31 +116,48 @@
     return $flag;
 } ?>
 
+<?php
+for ($row = 0; $row < 4; $row++) {
+  echo "<p><b>Row number $row</b></p>";
+  echo "<ul>";
+  for ($col = 0; $col < 3; $col++) {
+    echo "<li>".$cars[$row][$col]."</li>";
+  }
+  echo "</ul>";
+}
+?>
+
+
+
     <?php if( have_rows('corsi_offerti') ): ?>
-    <?php $numfields = count( get_field( 'corsi_offerti' ) ); ?>
+    <?php $rows = get_field( 'corsi_offerti' ); ?>
+    <?php $numRows = count($rows); ?>
+    
+    <?php echo $numRows ?>
+    
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-sm-3 text-center">
                     <h1 class="display-1">Corsi</h1>
                 </div>
             </div>
-        <?php $index=-1; while ( have_rows('corsi_offerti') ) : the_row(); $index++; ?>
-            <?php $corso = get_sub_field('nome_corso'); ?>
-            <?php if(checkIfEven($numfields)): ?>
-                <?php if(($index % 2) == 0): ?>
-                    <div class="row justify-content-center">
-                <?php endif; ?>
-                        <div class="card rounded-0 text-center">
-                            <img class="card-img" src="<?php echo get_template_directory_uri(); ?>/imgs/logo.png" alt="Card image">
-                            <div class="card-img-overlay">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with ttle bit longer.</p>
-                                <p class="card-text">Last updated 3 mins ago</p>
-                            </div>
-                        </div>
-                    </div>
-            <?php endif; ?>
-        <?php endwhile; ?>
+
+            <?php $i = 0; foreach( $rows as $index => $row ) {
+                if( checkIfEven( $index ) ) {
+                    echo $index;
+                    echo '<div class="row justify-content-center">';
+                        do {
+                            echo $i;
+                            echo "    ";
+                            echo $rows[$i]['colore_corso'];
+                            $i++;
+                        } while( (($i % 2) == 0));
+
+                        
+                    echo '</div>';
+                }
+            }?>
+
         </div>
     <?php endif; ?>
 
