@@ -1,5 +1,6 @@
 # DIST FOLDERS
 /css
+/.vscode
 # SASS
 .sass-cache/
 *.css.map
