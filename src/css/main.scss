@@ -8,26 +8,28 @@
   }
 }
 
-.navbar-nav {
-  margin: 0 auto;
+.navbar {
   font-family: 'Montserrat', sans-serif;
-  .nav-item {
-    &.current-menu-item {
-      background: #1B234C;
-      a {
-        color: white;
-        font-weight: bold;
-      }
-    }
-    a {
-      font-size: 26pt;
-      color: #1B234C;
-    }
-      &:hover {
+  .navbar-nav {
+    margin: 0 auto;
+    .nav-item {
+      &.current-menu-item {
+        background: #1B234C;
         a {
+          color: white;
           font-weight: bold;
         }
       }
+      a {
+        font-size: 26pt;
+        color: #1B234C;
+      }
+        &:hover {
+          a {
+            font-weight: bold;
+          }
+        }
+    }
   }
 }
 
@@ -72,18 +74,21 @@
 }
 
 .card {
-  // width: 420px;
-  // height: 295px;
-  // margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
   transition-duration: 0.4s;
   &:hover {
     box-shadow: 0 12px 20px 0 rgba(0,0,0,0.5), 0 10px 24px 0 rgba(0,0,0,0.49);
   }
-}
-
-.card-img-overlay {
-  background-color: green;
-  opacity: 0.56;
+  .card-img-overlay-corsi {
+    background-color: rgba(79, 163, 83, 0.56);
+    color: white;
+    .card-title {
+      margin: 10% auto;
+    }
+    .card-text {
+      font-size: 42px;
+    }
+  }
 }
 .card-img-overlay-footer{
   background-color: rgb(17, 0, 255);
