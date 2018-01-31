@@ -65,20 +65,18 @@
                 <div class="col-sm-4 p-5">
                     <div class="card rounded-0 text-center">
                         <img class="card-img" src="<?php echo get_template_directory_uri(); ?>/imgs/corsi/logoMeccanica.jpeg" alt="logo corso meccanica">
-                        <div class="card-img-overlay">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text">Last updated 3 mins ago</p>
+                        <div class="card-img-overlay card-img-overlay-corsi">
+                            <img class="card-title" src="<?php echo get_template_directory_uri(); ?>/imgs/corsi/iconaMeccanica.png" alt="">
+                            <p class="card-text">MECCANICA</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 p-5">
                     <div class="card rounded-0 text-center">
                         <img class="card-img" src="<?php echo get_template_directory_uri(); ?>/imgs/corsi/logoTermoidraulica.jpeg" alt="logo corso termoidraulica">
-                        <div class="card-img-overlay">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text">Last updated 3 mins ago</p>
+                        <div class="card-img-overlay card-img-overlay-corsi">
+                            <img class="card-title" src="<?php echo get_template_directory_uri(); ?>/imgs/corsi/iconaMeccanica.png" alt="">
+                            <p class="card-text">TERMOIDRAULICA</p>
                         </div>
                     </div>
                 </div>
@@ -87,64 +85,23 @@
                 <div class="col-sm-4 p-5">
                     <div class="card rounded-0 text-center">
                         <img class="card-img" src="<?php echo get_template_directory_uri(); ?>/imgs/corsi/logoSociosanitario.jpeg" alt="logo corso socio sanitario">
-                        <div class="card-img-overlay">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text">Last updated 3 mins ago</p>
+                        <div class="card-img-overlay card-img-overlay-corsi">
+                            <img class="card-title" src="<?php echo get_template_directory_uri(); ?>/imgs/corsi/iconaMeccanica.png" alt="">
+                            <p class="card-text">SOCIOSANITARIO</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 p-5">
                     <div class="card rounded-0 text-center">
                         <img class="card-img" src="<?php echo get_template_directory_uri(); ?>/imgs/corsi/logoAcconciatura.jpeg" alt="logo corso acconciatura">
-                        <div class="card-img-overlay">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text">Last updated 3 mins ago</p>
+                        <div class="card-img-overlay card-img-overlay-corsi">
+                            <img class="card-title" src="<?php echo get_template_directory_uri(); ?>/imgs/corsi/iconaMeccanica.png" alt="">
+                            <p class="card-text">ACCONCIATURA</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-
-<?php function checkIfEven($number) {
-    $flag = false;
-    if (($number % 2) == 0) {
-        $flag = true;
-    }
-    return $flag;
-} ?>
-
-    <?php if( have_rows('corsi_offerti') ): ?>
-    <?php $numfields = count( get_field( 'corsi_offerti' ) ); ?>
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="col-sm-3 text-center">
-                    <h1 class="display-1">Corsi</h1>
-                </div>
-            </div>
-        <?php $index=-1; while ( have_rows('corsi_offerti') ) : the_row(); $index++; ?>
-            <?php $corso = get_sub_field('nome_corso'); ?>
-            <?php if(checkIfEven($numfields)): ?>
-                <?php if(($index % 2) == 0): ?>
-                    <div class="row justify-content-center">
-                <?php endif; ?>
-                        <div class="card rounded-0 text-center">
-                            <img class="card-img" src="<?php echo get_template_directory_uri(); ?>/imgs/logo.png" alt="Card image">
-                            <div class="card-img-overlay">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with ttle bit longer.</p>
-                                <p class="card-text">Last updated 3 mins ago</p>
-                            </div>
-                        </div>
-                    </div>
-            <?php endif; ?>
-        <?php endwhile; ?>
-        </div>
-    <?php endif; ?>
-
-
 
 <?php get_footer(); ?>
