@@ -24,6 +24,10 @@
     <?php wp_head(); ?>
   </head>
 
+  <!-- link al font - start -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet">
+  <!-- link al font - end -->
+
   <!-- La funzione di Wordpress body_class() aggiunge al body delle classi specifiche in base alla pagina sulla quale ci si trova -->
   <!-- Questo permette di stylare con il css specificatamente elementi di diverse pagine -->
   <body <?php body_class(); ?>>

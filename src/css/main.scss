@@ -10,6 +10,7 @@
 
 .navbar-nav {
   margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
   .nav-item {
     &.current-menu-item {
       background: #1B234C;
@@ -81,7 +82,7 @@
 }
 
 .card-img-overlay {
-  background-color: red;
+  background-color: green;
   opacity: 0.56;
 }
 
