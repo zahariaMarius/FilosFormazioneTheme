@@ -51,6 +51,9 @@ function add_css() {
   wp_register_style('main', get_template_directory_uri() . '/css/main.min.css', array(), null, 'all');
   wp_enqueue_style('main');
 
+  wp_register_style('informazioni', get_template_directory_uri() . '/css/informazioni.css', array(), null, 'all');
+  wp_enqueue_style('informazioni');
+
 
   // È possibile anche aggiungere un url remoto (es. Google Fonts)
   // wp_register_style('webfont', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700,800,900', array(), null, 'all');
