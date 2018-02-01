@@ -57,7 +57,7 @@
     <section class="courses_section mt-5">
             <div class="row justify-content-center">
                 <div class="col-sm-2 text-center">
-                    <h1 class="display-3">Corsi</h1>
+                    <h1 class="display-3 section-title">Corsi</h1>
                 </div>
             </div>
             <!-- se i corsi sono dispari creare classi row ogni 3 oggetti, se invece sono pari ogni 2 -->
@@ -114,8 +114,8 @@
         <div class="form-container">
             <div class="row justify-content-center mb-5">
                 <div class="col-sm-6 text-center">
-                        <h1 class="display-3">Trova il tuo corso</h1>
-                    </div>
+                    <h1 class="display-3">Trova il tuo corso</h1>
+                </div>
             </div>
             <div class="row justify-content-center align-middle">
                 <div class="col-sm-3">
@@ -156,22 +156,75 @@
     </section>
     <!-- section trova corso -end -->
 
-    <section class="section-news">
+    <!-- section news - start -->
+    <section class="section-news mt-5">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-4">
-                <div class="card mb-3">
-                    <img class="card-img-top" src="..." alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <div class="row justify-content-center">
+                <div class="col-sm-6 text-center">
+                    <h1 class="display-3 section-title">News</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-4 p-5">
+                    <div class="card">
+                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/corsi/logoSociosanitario.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
                     </div>
+                </div>
+                <div class="col-sm-4 p-5">
+                    <div class="card">
+                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/corsi/logoSociosanitario.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 p-5">
+                    <div class="card">
+                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/corsi/logoSociosanitario.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-4 p-5">
+                    <div class="card">
+                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/corsi/logoSociosanitario.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 p-5">
+                    <div class="card">
+                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/corsi/logoSociosanitario.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 p-5">
+                    <div class="card">
+                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/corsi/logoSociosanitario.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- section news - end -->
 
 
 <?php get_footer(); ?>
