@@ -1,4 +1,3 @@
-
 /*
 jQuery è già installato da wordpress, quindi non serve aggiungerlo.
 Unica nota è che non lo troverete assegnato alla variabile di window `$`, bensì alla variabile `jQuery`,
@@ -13,4 +12,3 @@ $(".card mb-3").hover(function () {
 });
 
 $(".card mb-3").addClass("color");
-

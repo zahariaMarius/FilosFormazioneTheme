@@ -152,14 +152,77 @@
   font-family: 'Montserrat', sans-serif;
   min-height: 100%;
   min-height: 100vh;
-  .card-body {
-    .card-title {
-      font-size: 22px;
-      font-weight: bold;
+  .card {
+    .card-img-top {
+      height: 360px;
     }
-    .card-text {
-      font-size: 18px;
+    .overlay-card-img-top {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 360px;
+      width: 100%;
+      opacity: 0;
+      transition: .4s ease;
+      background-color: black;
+      .data-news {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 10%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    }
+    .card-body {
+      .card-title {
+        font-size: 22px;
+        font-weight: bold;
+      }
+      .card-text {
+        font-size: 18px;
+        margin-bottom: 150px;
+      }
+      .scopri-di-piu {
+        transition-duration: 0.4s;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #19919F;
+        height: 15px;
+        display: table-cell;
+        p {
+          visibility: hidden;
+          color: white;
+          font-size: 14px;
+          padding-top: 15px;
+          text-align: center;
+        }
+      }
+    }
+    &:hover {
+      .overlay-card-img-top {
+        opacity: 0.5;
+      }
+      .scopri-di-piu {
+        transition-duration: 0.4s;
+        height: 45px;
+        p {
+          visibility: visible;
+          animation: fadein 0.8s;
+        }
+      }
     }
   }
 }
 
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
