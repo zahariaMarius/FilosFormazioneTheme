@@ -8,67 +8,137 @@
   }
 }
 
-.navbar-nav {
-  margin: 0 auto;
+.navbar {
   font-family: 'Montserrat', sans-serif;
-  .nav-item {
-    &.current-menu-item {
-      background: #1B234C;
-      a {
-        color: white;
-        font-weight: bold;
-      }
-    }
-    a {
-      font-size: 26pt;
-      color: #1B234C;
-    }
-      &:hover {
+  .navbar-nav {
+    margin: 0 auto;
+    .nav-item {
+      &.current-menu-item {
+        background: #1B234C;
         a {
+          color: white;
           font-weight: bold;
         }
       }
+      a {
+        font-size: 26px;
+        color: #1B234C;
+      }
+        &:hover {
+          a {
+            font-weight: bold;
+          }
+        }
+    }
+  }
+  .btn {
+      font-size: 12px;
   }
 }
 
+.carousel-section {
+  font-family: 'Montserrat', sans-serif;
+  .carousel {
+    .carousel-indicators {
+      li {
+        width: 60px;
+        height: 5px;
+      }
+    }
+    .carousel-item {
+      height: 100vh;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .carousel-caption {
+        bottom: 20%;
+        .carousel-subtitle {
+          width: 80%;
+          margin: 0 auto;
+        }
+        .carousel-button {
+          font-size: 32px;
+          padding: 8px 30px;
+          opacity: 0.8;
+          margin-top: 18%;
+        }
+      }
+    }
+    .carousel-control-prev-icon {
+      width: 120px;
+      height: 150px;
+      background-image: url('../imgs/carousel/left-arrow.png');
+    }
+    .carousel-control-next-icon {
+      width: 120px;
+      height: 150px;
+      background-image: url('../imgs/carousel/right-arrow.png');
+    }
+  }
+}
 
-.carousel {
-  .carousel-indicators {
-    li {
-      width: 60px;
-      height: 5px;
+.courses_section {
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  .card-corso {
+    border: 0;
+    transition-duration: 0.4s;
+    &:hover {
+      box-shadow: 0 12px 20px 0 rgba(0,0,0,0.5), 0 10px 24px 0 rgba(0,0,0,0.49);
     }
-  }
-  .carousel-item {
-    height: 100vh;
-    img {
-      width: 100%;
-      height: 100%;
-    }
-    .carousel-caption {
-      bottom: 20%;
-      .carousel-subtitle {
-        width: 80%;
-        margin: 0 auto;
+    .card-img-overlay {
+      color: white;
+      &.meccanica {
+        background-color: rgba(0, 113, 175, 0.56); 
       }
-      .carousel-button {
-        font-size: 32px;
-        padding: 8px 30px;
-        opacity: 0.8;
-        margin-top: 18%;
+      &.termoidraulica {
+        background-color: rgba(234, 136, 97, 0.56);
+      }
+      &.sociosanitario {
+        background-color: rgba(34, 168, 115, 0.56);
+      }
+      &.acconciatura {
+        background-color: rgba(102, 45, 132, 0.56);
+      }
+      .card-title {
+        margin: 10% auto;
+        &.title-termoidraulica { 
+          transform: rotate(-30deg);
+        }
+        &.title-acconciatura { 
+          transform: rotate(30deg);
+        }
+      }
+      .card-text {
+        font-size: 42px;
+        text-transform: uppercase;
       }
     }
   }
-  .carousel-control-prev-icon {
-    width: 120px;
-    height: 150px;
-    background-image: url('../imgs/carousel/left-arrow.png');
-  }
-  .carousel-control-next-icon {
-    width: 120px;
-    height: 150px;
-    background-image: url('../imgs/carousel/right-arrow.png');
-  }
+}
+
+.trova-corso-section {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  //padding: 100px;
+  //height: 100vh;
+
+            .form-group {
+              .form-control {
+                border-radius: 0.8rem;
+                text-transform: uppercase;
+                color: #1B234C;
+              }
+              label {
+                font-size: 22px;
+              }
+            }
+            button {
+              width: 100%;
+              border-radius: 0.8rem;
+              color: #1B234C;
+            }
 }
 
 .card {
@@ -119,5 +189,7 @@
 .color{
   background-color: red;
 }
+
+
 
 

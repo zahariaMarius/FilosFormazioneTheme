@@ -1,3 +1,4 @@
+
 <?php /* Template Name: News */ ?>
 
 <?php get_header(); ?>
@@ -88,3 +89,4 @@
 
 </div>
 <?php get_footer(); ?>
+
