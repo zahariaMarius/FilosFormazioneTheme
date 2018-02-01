@@ -7,7 +7,7 @@
     <div class="row">
     <div class="footer">
     <div class="card bg-dark text-white" style= "width: 100%; height: 100%;">
-    <div class="card-img-overlay">
+    <div class="card-img-overlay" id="card-img-overlay-footer">
     <img class="card-img" id="card-img-footer" src="<?php echo get_template_directory_uri(); ?>/imgs/footer_img.jpg" alt="Card image">
  
    

@@ -103,5 +103,8 @@
             </div>
         </div>
     </section>
+<div class="trova-il-tuo-corso">
+<h1 class="titolo">Trova il tuo Corso</h1>
+</div>
 
 <?php get_footer(); ?>

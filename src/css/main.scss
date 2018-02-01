@@ -8,28 +8,26 @@
   }
 }
 
-.navbar {
+.navbar-nav {
+  margin: 0 auto;
   font-family: 'Montserrat', sans-serif;
-  .navbar-nav {
-    margin: 0 auto;
-    .nav-item {
-      &.current-menu-item {
-        background: #1B234C;
+  .nav-item {
+    &.current-menu-item {
+      background: #1B234C;
+      a {
+        color: white;
+        font-weight: bold;
+      }
+    }
+    a {
+      font-size: 26pt;
+      color: #1B234C;
+    }
+      &:hover {
         a {
-          color: white;
           font-weight: bold;
         }
       }
-      a {
-        font-size: 26pt;
-        color: #1B234C;
-      }
-        &:hover {
-          a {
-            font-weight: bold;
-          }
-        }
-    }
   }
 }
 
@@ -74,27 +72,52 @@
 }
 
 .card {
-  font-family: 'Montserrat', sans-serif;
+  // width: 420px;
+  // height: 295px;
+  // margin: 0 auto;
   transition-duration: 0.4s;
   &:hover {
     box-shadow: 0 12px 20px 0 rgba(0,0,0,0.5), 0 10px 24px 0 rgba(0,0,0,0.49);
   }
-  .card-img-overlay-corsi {
-    background-color: rgba(79, 163, 83, 0.56);
-    color: white;
-    .card-title {
-      margin: 10% auto;
-    }
-    .card-text {
-      font-size: 42px;
-    }
-  }
 }
-.card-img-overlay-footer{
-  background-color: rgb(17, 0, 255);
+
+.card-img-overlay {
+  background-color: green;
   opacity: 0.56;
 }
 
+.News{
+  text-align: center;
+  font-size: 80px;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 40px;
+}
+.eventi-in-arrivo{
+  text-align: left;
+  font-size: 40px;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.card-body{
+    #text{
+      font-family: 'Avenir Roman', sans-serif;
+    }
+      #title{
+        font-weight: bold;
+        font-size: 22pt;
+      }
+      #description{
+        font-size: 19pt;
+        font-family: 'Montserrat Bold';
+      }
 
+}
+.row{
+  margin-top: 40px;
+}
+.color{
+  background-color: red;
+}
 
 
