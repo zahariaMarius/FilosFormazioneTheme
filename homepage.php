@@ -58,7 +58,7 @@
     <section class="courses_section mt-5">
             <div class="row justify-content-center">
                 <div class="col-sm-2 text-center">
-                    <h1 class="display-1">Corsi</h1>
+                    <h1 class="display-3">Corsi</h1>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -102,22 +102,44 @@
                 </div>
             </div>
     </section>
+<!--- chisura container -->
+</div>
 
-    <section class="trova-corso-section">
-        <div class="row justify-content-center">
-            <div class="col-sm-4">
+
+    <section class="trova-corso-section mt-5" style="background: url(<?php echo get_template_directory_uri(); ?>/imgs/sectionTrovacorso.jpeg); background-size: 100% 100%;">
+        <div class="row justify-content-center mb-5">
+            <div class="col-sm-6 text-center">
+                    <h1 class="display-3">Trova il tuo corso</h1>
+                </div>
+        </div>
+        <div class="row justify-content-center align-middle">
+            <div class="col-sm-3">
                 <form>
-                    <div class="form-group text-center">
-                        <label class="mb-3" for="formselect1">Qual è il tuo titolo di studio?</label>
-                        <select class="form-control" id="formselect1">
-                            <option>Trrrrrokkkato</option>
+                    <div class="form-group text-center py-4">
+                        <label class="mb-3" for="formSelectTitoloStudio">Qual è il tuo titolo di studio?</label>
+                        <select class="form-control" id="formSelectTitoloStudio" style="background: url(<?php echo get_template_directory_uri(); ?>/imgs/down-arrow2.png) no-repeat right white; -webkit-appearance: none; background-position-x: 95%;">
+                            <option disable selected>Seleziona</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="form-group text-center py-4">
+                        <label class="mb-3" for="formSelectTitoloStudio">A quale corso sei interessato?</label>
+                        <select class="form-control" id="formSelectTitoloStudio" style="background: url(<?php echo get_template_directory_uri(); ?>/imgs/down-arrow.png) no-repeat right white; -webkit-appearance: none; background-position-x: 95%;">
+                            <option disable selected>Seleziona</option>
+                        </select>
+                    </div>
+                    <div class="form-group text-center py-4">
+                        <label class="mb-3" for="formSelectTitoloStudio">Qual è la sede che preferisci?</label>
+                        <select class="form-control" id="formSelectTitoloStudio" style="background: url(<?php echo get_template_directory_uri(); ?>/imgs/down-arrow.png) no-repeat right white; -webkit-appearance: none; background-position-x: 95%;">
+                            <option disable selected>Seleziona</option>
+                        </select>
+                    </div>
+                    <div class="row justify-content-end">
+                        <div class="col-sm-4">
+                            <button type="submit" class="btn btn-light">Cerca</button>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
     </section>
-<!--- chisura container -->
-</div>
 <?php get_footer(); ?>
