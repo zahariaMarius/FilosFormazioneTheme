@@ -63,6 +63,7 @@
           padding: 8px 30px;
           opacity: 0.8;
           margin-top: 18%;
+          border-radius: 0.8rem;
         }
       }
     }
@@ -199,25 +200,49 @@
         p {
           visibility: hidden;
           color: white;
-          font-size: 14px;
+          font-size: 16px;
           padding-top: 15px;
           text-align: center;
         }
       }
     }
     &:hover {
-      .overlay-card-img-top {
-        opacity: 0.5;
-      }
-      .scopri-di-piu {
-        transition-duration: 0.4s;
-        height: 45px;
-        p {
-          visibility: visible;
-          animation: fadein 0.8s;
+        .overlay-card-img-top {
+          opacity: 0.5;
         }
-      }
+        .scopri-di-piu {
+          transition-duration: 0.4s;
+          height: 45px;
+          p {
+            visibility: visible;
+            animation: fadein 0.8s;
+          }
+        }
     }
+  }
+}
+
+.section-filos-in-breve {
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100%;
+  min-height: 100vh;
+  .background-schema {
+    width: 100%;
+    height: 100%;
+  }
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .text {
+    font-size: 14px;
+  }
+  .btn {
+    color: white;
+    border-radius: 0.8rem;
+    text-transform: uppercase;
+    font-size: 18px;
+    background-color: #19919F;
   }
 }
 
