@@ -5,12 +5,5 @@ Unica nota è che non lo troverete assegnato alla variabile di window `$`, bens�
 quindi per prima cosa si può assegnarlo alla variabile $ se siete abituati ad utilizzarlo così.
 */
 window.$ = window.jQuery;
-$(".card mb-3").hover(function () {
-    $(".card-img-top").stop().animate({
-        opacity: 1.0
-        }, "slow");
-    $(".bordo").fadeIn("slow");
-});
 
-$(".card mb-3").addClass("color");
 
