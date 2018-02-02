@@ -167,8 +167,9 @@
             <div class="row justify-content-center">
                 <div class="col-sm-4 p-5">
                     <div class="card">
-                        <div class="prova">
-                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/corsi/logoSociosanitario.jpeg" alt="Card image cap">
+                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news1.jpeg" alt="Card image cap">
+                        <div class="overlay-card-img-top">
+                            <div class="data-news">15 Gennaio 2018</div>
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
@@ -181,19 +182,31 @@
                 </div>
                 <div class="col-sm-4 p-5">
                     <div class="card">
-                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/corsi/logoSociosanitario.jpeg" alt="Card image cap">
+                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news2.jpeg" alt="Card image cap">
+                        <div class="overlay-card-img-top">
+                            <div class="data-news">21 Maggio 2018</div>
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="scopri-di-piu">
+                                <p>Scopri di più</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 p-5">
                     <div class="card">
-                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/corsi/logoSociosanitario.jpeg" alt="Card image cap">
+                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news3.jpg" alt="Card image cap">
+                        <div class="overlay-card-img-top">
+                            <div class="data-news">10 Febbraio 2018</div>
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="scopri-di-piu">
+                                <p>Scopri di più</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -201,28 +214,46 @@
             <div class="row justify-content-center">
                 <div class="col-sm-4 p-5">
                     <div class="card">
-                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/corsi/logoSociosanitario.jpeg" alt="Card image cap">
+                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news4.jpeg" alt="Card image cap">
+                        <div class="overlay-card-img-top">
+                            <div class="data-news">26 Marzo 2018</div>
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="scopri-di-piu">
+                                <p>Scopri di più</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 p-5">
                     <div class="card">
-                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/corsi/logoSociosanitario.jpeg" alt="Card image cap">
+                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news5.jpeg" alt="Card image cap">
+                        <div class="overlay-card-img-top">
+                            <div class="data-news">19 Gennaio 2018</div>
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="scopri-di-piu">
+                                <p>Scopri di più</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 p-5">
                     <div class="card">
-                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/corsi/logoSociosanitario.jpeg" alt="Card image cap">
+                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news6.jpeg" alt="Card image cap">
+                        <div class="overlay-card-img-top">
+                            <div class="data-news">13 Gennaio 2018</div>
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="scopri-di-piu">
+                                <p>Scopri di più</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -231,5 +262,41 @@
     </section>
     <!-- section news - end -->
 
+
+    <!-- section filos in breve - start -->
+    <section class="section-filos-in-breve">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <h1 class="display-3 section-title">Filos in breve</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-2 text-center">
+                    <p class="title mb-3">Sei tu il protagonista</p>
+                    <p class="text">Mettiamo al centro le necessità delle persone in cerca di lavoro, con una forte attenzione ai processi di innovazione.</p>
+                </div>
+                <div class="col-sm-2 text-center">
+                    <p class="title mb-3">Non scordiamo le esigenze</p>
+                    <p class="text">Proponiamo corsi in diversi settori, per andare incontro alle esigenze del mercato del lavoro, che cambia sempre.</p>
+                </div>
+                <div class="col-sm-2 text-center">
+                    <p class="title mb-3">Siamo sempre aggiornati</p>
+                    <p class="text">La nostra azienda è un punto di riferimento per la prima formazione, l'aggiornamento e lariqualificazione degli occupati.</p>
+                </div>
+                <div class="col-sm-2 text-center">
+                    <p class="title mb-3">Ce la mettiamo tutta</p>
+                    <p class="text">Forniamo percorsi avanzati e puntiamo sulla preparazione del corpo docente, considerati dei veri professionisti.</p>
+                </div>
+                <div class="col-sm-2 text-center">
+                    <p class="title mb-3">Forniamo tutti i mezzi</p>
+                    <p class="text">Disponiamo di laboratori attrezzati nel settore della saldatura, e termoidraulico senza dimenticare le nuove tecnologie.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <a class="btn px-5" href="#">Approfondisci</a>
+            </div>
+        </div>
+    </section>
+    <!-- section filos in breve - end -->
+    
 
 <?php get_footer(); ?>
