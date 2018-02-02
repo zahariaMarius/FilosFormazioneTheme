@@ -1,3 +1,10 @@
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+}
+
 .section-title {
   color: #1B234C;
 }
@@ -34,6 +41,8 @@
       font-size: 14px;
       padding: 10px;
       border-radius: 0.8rem;
+      background: #19919F;
+      color: white;
   }
 }
 
@@ -196,12 +205,11 @@
         width: 100%;
         background-color: #19919F;
         height: 15px;
-        display: table-cell;
+        line-height: 45px;
         p {
           visibility: hidden;
           color: white;
           font-size: 16px;
-          padding-top: 15px;
           text-align: center;
         }
       }
@@ -243,6 +251,48 @@
     text-transform: uppercase;
     font-size: 18px;
     background-color: #19919F;
+  }
+}
+
+.sedi-section {
+  height: 100%;
+  height: 100vh;
+  line-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  .card {
+    width: 100%;
+    height: 100%;
+    .card-img-top {
+      width: 100%;
+      height: 100%;
+    }
+    .sede {
+      background-color: rgba(27, 35, 76, 0.8);    
+      height: 0;
+      transition-duration: 0.4s;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      line-height: 80px;
+      p {
+        visibility: hidden;
+        color: white;
+        font-size: 32px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+    &:hover {
+      .sede {
+        transition-duration: 0.4s;
+        height: 80px;
+      }
+      p {
+        visibility: visible;
+        animation: fadein 0.8s;
+      }
+    }
   }
 }
 
