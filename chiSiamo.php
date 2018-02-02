@@ -4,11 +4,13 @@
 
 <section class="chisiamo-section">
     <h1 class="hChisiamo">Chi Siamo</h1>
-    <div class="row ">
-        <div class="col-12">
-            <img class="chi-siamo-img"src="<?php echo get_template_directory_uri(); ?>/imgs/chi-siamo-img.png" alt="">
-        </div>
-    </div>
+        <section class="chisiamoImage" style="background: url(<?php echo get_template_directory_uri(); ?>/imgs/chi-siamo-img.png) no-repeat; background-size: 100% 100%;">
+        
+        
+        
+        </section>
+            
+
     <div class="row justify-content-center">
             <div class="col-2">
                  <img class="icona-left"src="<?php echo get_template_directory_uri(); ?>/imgs/Icona-1.png" alt="">
