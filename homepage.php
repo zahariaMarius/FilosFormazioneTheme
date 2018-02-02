@@ -53,8 +53,9 @@
     </section>
     <!-- section that contain the slideshow - end -->
 
-    <div class="container-fluid">
+    
     <section class="courses_section mt-5">
+        <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-sm-2 text-center">
                     <h1 class="display-3 section-title">Corsi</h1>
@@ -105,12 +106,15 @@
                     </div>
                 </div>
             </div>
-    </section>
-<!--- chisura container -->
+            <!--- chisura container -->
 </div>
+    </section>
+
 
     <!-- section trova corso -start -->
-    <section class="trova-corso-section mt-5" style="background: url(<?php echo get_template_directory_uri(); ?>/imgs/sectionTrovacorso.jpeg); background-size: 100% 100%;">
+    <section class="trova-corso-section mt-5" style="background: url(<?php echo get_template_directory_uri(); ?>/imgs/sectionTrovacorso.jpeg) no-repeat; background-size: 100% 100%;">
+        <div class="container-fluid">
+        
         <div class="form-container">
             <div class="row justify-content-center mb-5">
                 <div class="col-sm-6 text-center">
@@ -153,6 +157,7 @@
                 </div>
             </div>
         </div>
+        </div>
     </section>
     <!-- section trova corso -end -->
 
@@ -167,12 +172,16 @@
             <div class="row justify-content-center">
                 <div class="col-sm-4 p-5">
                     <div class="card">
+                    <!-- per ogni news inserire l'immagine qua sotto, con alt rispettivo -->
                         <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news1.jpeg" alt="Card image cap">
                         <div class="overlay-card-img-top">
+                            <!-- qua inserire la data di quando la news è stata inserita nel db -->
                             <div class="data-news">15 Gennaio 2018</div>
                         </div>
                         <div class="card-body">
+                            <!-- qua inserire il titolo della news -->
                             <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
+                            <!-- qua inserire la descrizione della news, e non l'intero corpo siccome è una breve presentazione di essa -->
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             <div class="scopri-di-piu">
                                 <p>Scopri di più</p>
@@ -297,6 +306,33 @@
         </div>
     </section>
     <!-- section filos in breve - end -->
-    
+
+     <!-- section sedi -start -->
+    <section class="sedi-section" style="background: url(<?php echo get_template_directory_uri(); ?>/imgs/sedeBackground.png) no-repeat center center; background-size: 40% 100%;">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <h1 class="display-3 section-title">Sedi</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-4 p-5">
+                <div class="card">
+                    <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news6.jpeg" alt="">
+                        <div class="sede">
+                            <p>Novara</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 p-5">
+                    <div class="card">
+                    <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/sedeTorino.jpg" alt="">
+                        <div class="sede">
+                            <p>Torino</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section sedi - end -->
 
 <?php get_footer(); ?>
