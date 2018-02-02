@@ -234,63 +234,69 @@ body {
   font-family: 'Montserrat', sans-serif;
   min-height: 100%;
   min-height: 100vh;
-  .background-schema {
-    width: 100%;
-    height: 100%;
-  }
-  .title {
-    font-size: 18px;
-    font-weight: bold;
-  }
-  .text {
-    font-size: 14px;
+  .body {
+    img {
+      width: 100%;
+    }
+    .button {
+      text-align: center;
+      position: absolute;
+      bottom: -10px;
+      left: 42%;
+    }
   }
   .btn {
     color: white;
     border-radius: 0.8rem;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 22px;
     background-color: #19919F;
   }
 }
 
 .sedi-section {
-  height: 100%;
-  height: 100vh;
-  line-height: 100vh;
   font-family: 'Montserrat', sans-serif;
-  .card {
-    width: 100%;
-    height: 100%;
-    .card-img-top {
-      width: 100%;
-      height: 100%;
-    }
-    .sede {
-      background-color: rgba(27, 35, 76, 0.8);    
-      height: 0;
-      transition-duration: 0.4s;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      line-height: 80px;
-      p {
-        visibility: hidden;
-        color: white;
-        font-size: 32px;
-        text-align: center;
-        text-transform: uppercase;
-      }
-    }
-    &:hover {
-      .sede {
-        transition-duration: 0.4s;
-        height: 80px;
-      }
-      p {
-        visibility: visible;
-        animation: fadein 0.8s;
+  height: 75%;
+  height: 75vh;
+  .card-row {
+    height: 55vh;
+    .card-col {
+      display: flex;
+      align-items: center;
+      .card {
+        width: 100%;
+        height: 90%;
+        .card-img-top {
+          width: 100%;
+          height: 100%;
+        }
+        .sede {
+          background-color: rgba(27, 35, 76, 0.8);    
+          height: 0;
+          transition-duration: 0.4s;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          line-height: 80px;
+          p {
+            visibility: hidden;
+            color: white;
+            font-size: 32px;
+            text-align: center;
+            text-transform: uppercase;
+          }
+        }
+        &:hover {
+          .sede {
+            transition-duration: 0.4s;
+            height: 80px;
+          }
+          p {
+            visibility: visible;
+            animation: fadein 0.8s;
+          }
+        }
       }
     }
   }

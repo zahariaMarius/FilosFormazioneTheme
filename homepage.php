@@ -278,43 +278,30 @@
             <div class="row justify-content-center">
                 <h1 class="display-3 section-title">Filos in breve</h1>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-sm-2 text-center">
-                    <p class="title mb-3">Sei tu il protagonista</p>
-                    <p class="text">Mettiamo al centro le necessità delle persone in cerca di lavoro, con una forte attenzione ai processi di innovazione.</p>
+            <div class="row justify-content-center py-5">
+                <div class="col-sm-12 body">
+                    <img src="<?php echo get_template_directory_uri(); ?>/imgs/sectionFilosinbreve.png" alt="">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-3">
+                            <div class="button">
+                                <a class="btn" href="#">Approfondisci</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-2 text-center">
-                    <p class="title mb-3">Non scordiamo le esigenze</p>
-                    <p class="text">Proponiamo corsi in diversi settori, per andare incontro alle esigenze del mercato del lavoro, che cambia sempre.</p>
-                </div>
-                <div class="col-sm-2 text-center">
-                    <p class="title mb-3">Siamo sempre aggiornati</p>
-                    <p class="text">La nostra azienda è un punto di riferimento per la prima formazione, l'aggiornamento e lariqualificazione degli occupati.</p>
-                </div>
-                <div class="col-sm-2 text-center">
-                    <p class="title mb-3">Ce la mettiamo tutta</p>
-                    <p class="text">Forniamo percorsi avanzati e puntiamo sulla preparazione del corpo docente, considerati dei veri professionisti.</p>
-                </div>
-                <div class="col-sm-2 text-center">
-                    <p class="title mb-3">Forniamo tutti i mezzi</p>
-                    <p class="text">Disponiamo di laboratori attrezzati nel settore della saldatura, e termoidraulico senza dimenticare le nuove tecnologie.</p>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <a class="btn px-5" href="#">Approfondisci</a>
             </div>
         </div>
     </section>
     <!-- section filos in breve - end -->
 
      <!-- section sedi -start -->
-    <section class="sedi-section" style="background: url(<?php echo get_template_directory_uri(); ?>/imgs/sedeBackground.png) no-repeat center center; background-size: 40% 100%;">
+    <section class="sedi-section" style="background: url(<?php echo get_template_directory_uri(); ?>/imgs/sedeBackground.png) no-repeat center center; background-size: 35% 100%;">
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <h1 class="display-3 section-title">Sedi</h1>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-sm-4 p-5">
+            <div class="row justify-content-center card-row">
+                <div class="col-sm-4 p-5 card-col">
                 <div class="card">
                     <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news6.jpeg" alt="">
                         <div class="sede">
@@ -322,7 +309,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4 p-5">
+                <div class="col-sm-4 p-5 card-col">
                     <div class="card">
                     <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/sedeTorino.jpg" alt="">
                         <div class="sede">
