@@ -17,6 +17,11 @@ body {
   color: #1B234C;
 }
 
+
+/*
+<------------HOMEPAGE STYLE------------>
+*/
+
 .navbar-brand {
   img {
     height: 65px;
@@ -277,15 +282,13 @@ body {
         }
         .sede {
           background-color: rgba(27, 35, 76, 0.8);    
-          height: 0;
-          transition-duration: 0.4s;
+          height: 80px;
           position: absolute;
           bottom: 0;
           left: 0;
           width: 100%;
           line-height: 80px;
           p {
-            visibility: hidden;
             color: white;
             font-size: 32px;
             text-align: center;
@@ -293,15 +296,7 @@ body {
           }
         }
         &:hover {
-          box-shadow: 0 12px 20px 0 rgba(0,0,0,0.5), 0 10px 24px 0 rgba(0,0,0,0.49);          
-          .sede {
-            transition-duration: 0.4s;
-            height: 80px;
-          }
-          p {
-            visibility: visible;
-            animation: fadein 0.8s;
-          }
+          box-shadow: 0 12px 20px 0 rgba(0,0,0,0.5), 0 10px 24px 0 rgba(0,0,0,0.49);
         }
       }
     }
@@ -361,3 +356,78 @@ body {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
+
+
+/*
+<------------HOMEPAGE STYLE------------>
+*/
+
+
+/*
+<------------SINGLE-CORSO STYLE------------>
+*/
+
+.jumbotron {
+  height: 550px;
+  position: relative;
+  .tipo-corso {
+    background-color: rgba(27, 35, 76, 0.8);    
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    line-height: 80px;
+    text-align: center;
+    p {
+      font-size: 36px;
+      color: white;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.post-corso {
+  .informazioni-generali {
+    .body {
+      .title {
+        text-transform: uppercase;
+        font-size: 26px;
+        font-weight: 500;
+      }
+      .text {
+        line-height: 1.6;
+      }
+    }
+  }
+  .informazioni-utili {
+    .aside-title {
+      text-transform: uppercase;
+      font-size: 26px;
+      font-weight: 500;
+    }
+    .icon {
+      text-align: end;
+      img {
+        height: 45px; 
+      }
+    }
+    .text {
+      p {
+        line-height: 1.6;
+        span {
+          font-weight: 500;
+        }
+      }
+    }
+    .btn {
+      color: white;
+      background-color: #1B234C;
+    }
+  }
+}
+
+
+/*
+<------------SINGLE-CORSO STYLE------------>
+*/
