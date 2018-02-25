@@ -1,4 +1,4 @@
-<?php /* Template Name: Sedi e Contatti */ ?>
+<?php /* Template Name: Sedi e Contatti */ ?> 
 
 <?php get_header(); ?>
 <section class="richiedi-informazioni-section">

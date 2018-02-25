@@ -1,4 +1,4 @@
-<?php /* Template Name: Servizio lavoro */ ?>
+<?php /* Template Name: Servizio lavoro */ ?> 
 
 <?php get_header(); ?>
 <section class="servizi-section">

@@ -204,7 +204,7 @@ body {
       }
       .card-text {
         font-size: 18px;
-        margin-bottom: 150px;
+        margin-bottom: 50px;
       }
       .scopri-di-piu {
         transition-duration: 0.4s;
@@ -427,7 +427,211 @@ body {
   }
 }
 
+.corsi-simili {
+  p {
+    color: #1B234C
+  }
+  hr {
+    border-color: #1B234C;
+  }
+}
 
 /*
 <------------SINGLE-CORSO STYLE------------>
+*/
+
+/*
+<------------FOOTER STYLE------------>
+*/
+
+.footer {
+  height: 100%;
+  margin-top: 60px;
+  .jumbotron {
+    height: 400px;
+    position: relative;
+    margin-bottom: 0;
+  }
+  .sfondo-logo {    
+    position: absolute;
+    bottom: 0;
+    left: -10px;
+    width: 30%;
+    height: 100%;
+    img  {
+      width: 95%;
+      height: 100%;
+    }
+  }
+}
+
+/*
+<------------FOOTER STYLE------------>
+*/
+
+/*
+<------------CORSI STYLE------------>
+*/
+
+.corsi-section {
+  .card {
+    .card-img-top {
+      height: 360px;
+    }
+    .overlay-card-img-top {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 360px;
+      width: 100%;
+      opacity: 0;
+      transition: .4s ease;
+      background-color: black;
+      .data-news {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 10%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    }
+    .card-body {
+      .card-title {
+        font-size: 22px;
+        font-weight: bold;
+      }
+      .card-text {
+        font-size: 18px;
+      }
+      .course-detail {
+        img {
+          width: 60%;
+        }
+        span {
+          font-weight: 500;
+        }
+      }
+      .scopri-di-piu {
+        transition-duration: 0.4s;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #19919F;
+        height: 15px;
+        line-height: 45px;
+        p {
+          visibility: hidden;
+          color: white;
+          font-size: 16px;
+          text-align: center;
+        }
+      }
+    }
+    &:hover {
+        .overlay-card-img-top {
+          opacity: 0.5;
+        }
+        .scopri-di-piu {
+          transition-duration: 0.4s;
+          height: 45px;
+          p {
+            visibility: visible;
+            animation: fadein 0.8s;
+          }
+        }
+    }
+  }
+}
+
+/*
+<------------CORSI STYLE------------>
+*/
+
+/*
+<------------NEWS STYLE------------>
+*/
+
+.news-page {
+  p {
+    color: #1B234C
+  }
+  hr {
+    border-color: #1B234C;
+  }
+  .card {
+    .card-img-top {
+      height: 360px;
+    }
+    .overlay-card-img-top {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 360px;
+      width: 100%;
+      opacity: 0;
+      transition: .4s ease;
+      background-color: black;
+      .data-news {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 10%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    }
+    .card-body {
+      .card-title {
+        font-size: 22px;
+        font-weight: bold;
+      }
+      .card-text {
+        font-size: 18px;
+        margin-bottom: 50px;
+      }
+      .scopri-di-piu {
+        transition-duration: 0.4s;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #19919F;
+        height: 15px;
+        line-height: 45px;
+        p {
+          visibility: hidden;
+          color: white;
+          font-size: 16px;
+          text-align: center;
+        }
+      }
+    }
+    &:hover {
+        .overlay-card-img-top {
+          opacity: 0.5;
+        }
+        .scopri-di-piu {
+          transition-duration: 0.4s;
+          height: 45px;
+          p {
+            visibility: visible;
+            animation: fadein 0.8s;
+          }
+        }
+    }
+  }
+}
+
+/*
+<------------NEWS STYLE------------>
 */
