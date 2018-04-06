@@ -1,4 +1,4 @@
-<?php
+<?php 
 // Configuriamo le funzionalità che il tema supporta
 //
 // ESEGUITA ALL'HOOK: after_setup_theme

@@ -1,9 +1,9 @@
-
+ 
   <!-- Chiudo page container -->
  <!-- </div>  -->
  
 
-<section class="footer-section">
+<!-- <section class="footer-section">
 
   <div class="row">
       <div class="col-12">
@@ -20,7 +20,16 @@
       </div>
     </div>
 
-</section>
+</section> -->
+
+<div class="footer">
+  <div class="jumbotron jumbotron-fluid p-0" style="background: url(<?php echo get_template_directory_uri(); ?>/imgs/footer-01.png); background-size: cover; background-position: center center;">
+  <div class="sfondo-logo">
+    <img src="<?php echo get_template_directory_uri(); ?>/imgs/sfondo-logo.png" alt="">
+  </div>
+  </div>   
+</div>
+
 
  <!-- Questa funzione di Wordpress carica tutti i tag del footer impostati da Wordpress -->
   <?php wp_footer(); ?>

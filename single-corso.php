@@ -148,6 +148,75 @@
                 </aside>
             </div>
         </div>
+
+<div class="corsi-simili">
+    <div class="row mt-5">
+        <div class="col-sm-12">
+            <p>Corsi simili</p>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+                <!-- per ogni news inserire l'immagine qua sotto, con alt rispettivo -->
+                <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news1.jpeg" alt="News titolo">
+                <div class="overlay-card-img-top">
+                    <!-- qua inserire la data di quando la news è stata inserita nel db -->
+                    <div class="data-news">15 Gennaio 2018</div>
+                </div>
+                <div class="card-body">
+                    <!-- qua inserire il titolo della news -->
+                    <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
+                    <!-- qua inserire la descrizione della news, e non l'intero corpo siccome è una breve presentazione di essa -->
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="scopri-di-piu">
+                        <p>Scopri di più</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <!-- per ogni news inserire l'immagine qua sotto, con alt rispettivo -->
+                <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news1.jpeg" alt="News titolo">
+                <div class="overlay-card-img-top">
+                    <!-- qua inserire la data di quando la news è stata inserita nel db -->
+                    <div class="data-news">15 Gennaio 2018</div>
+                </div>
+                <div class="card-body">
+                    <!-- qua inserire il titolo della news -->
+                    <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
+                    <!-- qua inserire la descrizione della news, e non l'intero corpo siccome è una breve presentazione di essa -->
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="scopri-di-piu">
+                        <p>Scopri di più</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <!-- per ogni news inserire l'immagine qua sotto, con alt rispettivo -->
+                <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news1.jpeg" alt="News titolo">
+                <div class="overlay-card-img-top">
+                    <!-- qua inserire la data di quando la news è stata inserita nel db -->
+                    <div class="data-news">15 Gennaio 2018</div>
+                </div>
+                <div class="card-body">
+                    <!-- qua inserire il titolo della news -->
+                    <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
+                    <!-- qua inserire la descrizione della news, e non l'intero corpo siccome è una breve presentazione di essa -->
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="scopri-di-piu">
+                        <p>Scopri di più</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
     </section>
 
 

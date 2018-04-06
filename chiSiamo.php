@@ -1,4 +1,4 @@
-<?php /* Template Name: Chi Siamo */ ?>
+<?php /* Template Name: Chi Siamo */ ?> 
 
 <?php get_header(); ?>
 
