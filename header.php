@@ -43,5 +43,5 @@
   <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
     <?php header_menu(); ?>
   </div>
-  <a class="btn" href="#">Richiedi Informazioni</a>
+  <a class="btn" href="./richiedi-informazioni/">Richiedi Informazioni</a>
 </nav>

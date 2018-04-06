@@ -3,6 +3,30 @@
 
 <?php get_header(); ?>
 
+<?php 
+
+function StampaMeseIT()
+{
+    $mese_n = get_the_date('m');
+    $mese = array(
+        '01' => 'Gennaio',
+        '02' => 'Febbraio',
+        '03' => 'Marzo',
+        '04' => 'Aprile',
+        '05' => 'Maggio',
+        '06' => 'Giugno',
+        '07' => 'Luglio',
+        '08' => 'Agosto',
+        '09' => 'Settembre',
+        '10' => 'Ottobre',
+        '11' => 'Novembre',
+        '12' => 'Dicembre'
+    );
+    return $data = get_the_date('d') . ' ' . $mese[$mese_n] . ' ' . get_the_date('Y');
+}
+
+?>
+
 <section class="news-page">
     <div class="container-fluid">
         <div class="row justify-content-center">
@@ -13,202 +37,69 @@
         </div>
 
         <div class="eventi-in-arrivo my-5">
-            <p>Eventi in arrivo</p>
-            <hr>
+        <p>Eventi in Arrivo</p>
+        <hr/>
+
             <div class="row justify-content-center mb-5">
-                <div class="col-sm-4">
+                <?php 
+                    query_posts( 'category_name=attuale&posts_per_page=6' ); 
+                        while(have_posts()) : the_post(); ?>
+
+                    <div class="col-sm-4" style="margin-bottom: 30px;">
                     <div class="card">
-                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news4.jpeg" alt="News titolo">
+
+                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('filos_home',array('class'=>'card-img-top')); ?></a>
                         <div class="overlay-card-img-top">
-                            <div class="data-news">26 Marzo 2018</div>
+                            <div class="data-news" ><?php echo StampaMeseIT(); ?></div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <h5 class="card-title" ><?php the_title(); ?></h5>
+                            <p class="card-text"><?php the_excerpt(); ?></p>
                             <div class="scopri-di-piu">
-                                <p>Scopri di più</p>
+                                <a href="<?php the_permalink(); ?>"><p>Scopri di più</p></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="card">
-                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news4.jpeg" alt="News titolo">
-                        <div class="overlay-card-img-top">
-                            <div class="data-news">26 Marzo 2018</div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="scopri-di-piu">
-                                <p>Scopri di più</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card">
-                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news4.jpeg" alt="News titolo">
-                        <div class="overlay-card-img-top">
-                            <div class="data-news">26 Marzo 2018</div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="scopri-di-piu">
-                                <p>Scopri di più</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center mb-5">
-                <div class="col-sm-4">
-                    <div class="card">
-                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news4.jpeg" alt="News titolo">
-                        <div class="overlay-card-img-top">
-                            <div class="data-news">26 Marzo 2018</div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="scopri-di-piu">
-                                <p>Scopri di più</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card">
-                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news4.jpeg" alt="News titolo">
-                        <div class="overlay-card-img-top">
-                            <div class="data-news">26 Marzo 2018</div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="scopri-di-piu">
-                                <p>Scopri di più</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card">
-                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news4.jpeg" alt="News titolo">
-                        <div class="overlay-card-img-top">
-                            <div class="data-news">26 Marzo 2018</div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="scopri-di-piu">
-                                <p>Scopri di più</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
+                <?php endwhile; ?>
+
+                
             </div>
         </div>
 
-        <div class="eventi-passati my-5">
-        <p>Eventi passati</p>
-        <hr>
-        <div class="row justify-content-center mb-5">
-                <div class="col-sm-4">
-                    <div class="card">
-                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news4.jpeg" alt="News titolo">
-                        <div class="overlay-card-img-top">
-                            <div class="data-news">26 Marzo 2018</div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="scopri-di-piu">
-                                <p>Scopri di più</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card">
-                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news4.jpeg" alt="News titolo">
-                        <div class="overlay-card-img-top">
-                            <div class="data-news">26 Marzo 2018</div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="scopri-di-piu">
-                                <p>Scopri di più</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card">
-                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news4.jpeg" alt="News titolo">
-                        <div class="overlay-card-img-top">
-                            <div class="data-news">26 Marzo 2018</div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="scopri-di-piu">
-                                <p>Scopri di più</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="eventi-in-arrivo my-5">
+        <p>Eventi Passati</p>
+        <hr/>
+
             <div class="row justify-content-center mb-5">
-                <div class="col-sm-4">
+                <?php 
+                query_posts('category_name=scaduta&posts_per_page=6');
+                while (have_posts()) : the_post(); ?>
+
+                    <div class="col-sm-4" style="margin-bottom: 30px;">
                     <div class="card">
-                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news4.jpeg" alt="News titolo">
+
+                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('filos_home', array('class' => 'card-img-top')); ?></a>
                         <div class="overlay-card-img-top">
-                            <div class="data-news">26 Marzo 2018</div>
+                            <div class="data-news" ><?php echo StampaMeseIT(); ?></div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <h5 class="card-title" ><?php the_title(); ?></h5>
+                            <p class="card-text"><?php the_excerpt(); ?></p>
                             <div class="scopri-di-piu">
-                                <p>Scopri di più</p>
+                                <a href="<?php the_permalink(); ?>"><p>Scopri di più</p></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="card">
-                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news4.jpeg" alt="News titolo">
-                        <div class="overlay-card-img-top">
-                            <div class="data-news">26 Marzo 2018</div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="scopri-di-piu">
-                                <p>Scopri di più</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card">
-                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news4.jpeg" alt="News titolo">
-                        <div class="overlay-card-img-top">
-                            <div class="data-news">26 Marzo 2018</div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="scopri-di-piu">
-                                <p>Scopri di più</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
+                <?php endwhile; ?>
+
+                
             </div>
         </div>
+
     </div>
 </section>
 

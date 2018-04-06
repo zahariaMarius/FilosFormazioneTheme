@@ -23,35 +23,24 @@
             </ol>
             <!-- per ogni news creare un carousel-item -->
             <div class="carousel-inner">
-                <div class="carousel-item active">
+            <?php
+            $primo = true;
+            query_posts( 'category_name=topnews&posts_per_page=3' ); 
+                        while(have_posts()) : the_post(); ?>
+                <div class="carousel-item <?php if($primo) echo 'active' ?>">
                     <!-- inserire il contenuto della slideshow in questo blocco solamente l'immagine - start -->
-                    <img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/imgs/carousel/slideimage.jpeg" alt="Immagine news">
+                    <img class="d-block w-100" src="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), "filos_corsi_background")[0]; ?>" alt="Immagine news">
                     <!-- inserire il contenuto della slideshow in questo blocco, solamente l'immagine - end -->
                     <div class="carousel-caption d-none d-md-block">
                         <!-- inserire il contenuto della slideshow in questo blocco, ripettivamente: Titolo, Sottotitolo e bottone - start -->
-                        <h1 class="carousel-title display-1">Open Day</h1>
-                        <h5 class="carousel-subtitle display-4">Vieni a conoscre i nuovi corsi 2018</h5>
-                        <a class="carousel-button btn btn-danger text-center" href="#">Scopri di più</a>
+                        <h1 class="carousel-title display-1"><?php the_title(); ?></h1>
+                        <h5 class="carousel-subtitle display-4"><?php the_field('sottotitolo'); ?></h5>
+                        <a class="carousel-button btn btn-danger text-center" href="<?php the_permalink(); ?>">Scopri di più</a>
                         <!-- inserire il contenuto della slideshow in questo blocco, ripettivamente: Titolo, Sottotitolo e bottone - end -->
                     </div>
                 </div>
                 <!-- una volta ciclato il primo eliminare questi - start -->
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/imgs/carousel/slideimage.jpeg" alt="Immagine news">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h1 class="carousel-title display-1">Open Day</h1>
-                        <h5 class="carousel-subtitle display-4">Vieni a conoscre i nuovi corsi 2018</h5>
-                        <a class="carousel-button btn btn-danger text-center" href="#">Scopri di più</a>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/imgs/carousel/slideimage.jpeg" alt="Immagine news">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h1 class="carousel-title display-1">Open Day</h1>
-                        <h5 class="carousel-subtitle display-4">Vieni a cnoscre i nuovi corsi 2018</h5>
-                        <a class="carousel-button btn btn-danger text-center" href="#">Scopri di più</a>
-                    </div>
-                </div>
+                <?php $primo = false; endwhile; ?>
             </div>
             <!-- una volta ciclato il primo eliminare questi - end -->    
 
@@ -83,6 +72,7 @@
             <div class="row justify-content-center">
                 <!-- per ogni corso craere una col -->
                 <div class="col-sm-4 p-5">
+                    <a href="./corsi/?corso_ricercato=meccanica">
                     <div class="card card-corso rounded-0 text-center">
                         <!-- inserire il contenuto dei macro corsi offerti in questo blocco, rispettivamente: immagine di sfondo, icona che rappresenta il corso e nome del corso - start -->
                         <img class="card-img" src="<?php echo get_template_directory_uri(); ?>/imgs/corsi/logoMeccanica.jpeg" alt="logo corso meccanica">
@@ -92,8 +82,10 @@
                         </div>
                         <!-- inserire il contenuto dei macro corsi offerti in questo blocco, rispettivamente: immagine di sfondo, icona che rappresenta il corso e nome del corso - start -->
                     </div>
+                    </a>
                 </div>
                 <div class="col-sm-4 p-5">
+                <a href="./corsi/?corso_ricercato=termoidraulica">
                     <div class="card card-corso rounded-0 text-center">
                         <img class="card-img" src="<?php echo get_template_directory_uri(); ?>/imgs/corsi/logoTermoidraulica.jpeg" alt="logo corso termoidraulica">
                         <div class="card-img-overlay termoidraulica">
@@ -101,10 +93,12 @@
                             <p class="card-text">TERMOIDRAULICA</p>
                         </div>
                     </div>
+                    </a>
                 </div>
             </div> <!-- qua invece finisce la riga e sotto ne inizia un'altra -->
             <div class="row justify-content-center">
                 <div class="col-sm-4 p-5">
+                <a href="./corsi/?corso_ricercato=sociosanitario">
                     <div class="card card-corso rounded-0 text-center">
                         <img class="card-img" src="<?php echo get_template_directory_uri(); ?>/imgs/corsi/logoSociosanitario.jpeg" alt="logo corso socio sanitario">
                         <div class="card-img-overlay sociosanitario">
@@ -112,8 +106,10 @@
                             <p class="card-text">SOCIO SANITARIO</p>
                         </div>
                     </div>
+                    </a>
                 </div>
                 <div class="col-sm-4 p-5">
+                <a href="./corsi/?corso_ricercato=acconciatura">
                     <div class="card card-corso rounded-0 text-center">
                         <img class="card-img" src="<?php echo get_template_directory_uri(); ?>/imgs/corsi/logoAcconciatura.jpeg" alt="logo corso acconciatura">
                         <div class="card-img-overlay acconciatura">
@@ -121,6 +117,7 @@
                             <p class="card-text">ACCONCIATURA</p>
                         </div>
                     </div>
+                </a>
                 </div>
             </div>
             
@@ -139,28 +136,41 @@
             </div>
             <div class="row justify-content-center align-middle">
                 <div class="col-sm-3">
-                    <form>
+                    <form method="get" action="./corsi/">
                         <div class="form-group text-center py-4">
                             <!-- inserire per ogni label il contenuto -->
-                            <label class="mb-3" for="formSelectTitoloStudio">Qual è il tuo titolo di studio?</label>
-                            <select class="form-control" id="formSelectTitoloStudio" style="background: url(<?php echo get_template_directory_uri(); ?>/imgs/down-arrow2.png) no-repeat right white; -webkit-appearance: none; background-position-x: 95%;">
+                            <label class="mb-3" for="formSelectTitoloStudio">Parlaci di te:</label>
+                            <select class="form-control" id="formSelectTitoloStudio" name="rivolto_a"style="background: url(<?php echo get_template_directory_uri(); ?>/imgs/down-arrow2.png) no-repeat right white; -webkit-appearance: none; background-position-x: 95%;">
                                 <option disabled selected>Seleziona</option>
+                                <option value="giovaniobbligoformativo">Sono un giovane in obbligo formativo (14-18 anni)</option>
+                                <option value="sistemaduale">Partecipo ad un sistema duale</option>
+                                <option value="ifts">Sono diplomato e/o laureato</option>
+                                <option value="disoccupati">Sono disoccupato</option>
+                                <option value="inoccupati" >Sono inoccupato</option>
+                                <option value="occupati" >Sto lavorando</option>
+                                <option value="cassaintegrati" >Sono cassa integrato</option>
                                 <!-- inserire per ogni select le option in maniera dinamica, lasciare quella di default -->
                             </select>
                         </div>
                         <div class="form-group text-center py-4">
                             <!-- inserire per ogni label il contenuto -->
                             <label class="mb-3" for="formSelectTitoloStudio">A quale corso sei interessato?</label>
-                            <select class="form-control" id="formSelectTitoloStudio" style="background: url(<?php echo get_template_directory_uri(); ?>/imgs/down-arrow2.png) no-repeat right white; -webkit-appearance: none; background-position-x: 95%;">
+                            <select class="form-control" id="formSelectTitoloStudio" name="corso_ricercato" style="background: url(<?php echo get_template_directory_uri(); ?>/imgs/down-arrow2.png) no-repeat right white; -webkit-appearance: none; background-position-x: 95%;">
                                 <option disabled selected>Seleziona</option>
+                                <option value="acconciatura">Acconciatura</option>
+                                <option value="meccanica">Meccanica</option>
+                                <option value="sociosanitario">Socio sanitario</option>
+                                <option value="termoidraulica">Termoidraulica</option>
                                 <!-- inserire per ogni select le option in maniera dinamica, lasciare quella di default -->
                             </select>
                         </div>
                         <div class="form-group text-center py-4">
                             <!-- inserire per ogni label il contenuto -->
                             <label class="mb-3" for="formSelectTitoloStudio">Qual è la sede che preferisci?</label>
-                            <select class="form-control" id="formSelectTitoloStudio" style="background: url(<?php echo get_template_directory_uri(); ?>/imgs/down-arrow2.png) no-repeat right white; -webkit-appearance: none; background-position-x: 95%;">
+                            <select class="form-control" id="formSelectTitoloStudio" name="sede" style="background: url(<?php echo get_template_directory_uri(); ?>/imgs/down-arrow2.png) no-repeat right white; -webkit-appearance: none; background-position-x: 95%;">
                                 <option disabled selected>Seleziona</option>
+                                <option value="torino">Torino</option>
+                                <option value="novara">Novara</option>
                                 <!-- inserire per ogni select le option in maniera dinamica, lasciare quella di default -->
                             </select>
                         </div>
@@ -188,102 +198,47 @@
             <!-- Ogni tre news creare una row -->
             <div class="row justify-content-center">
                 <!-- creare una colonna per ogni news -->
-                <div class="col-sm-4 p-5">
+                <?php 
+                    query_posts( 'category_name=attuale&posts_per_page=6' ); 
+                        while(have_posts()) : the_post(); ?>
+
+                    <div class="col-sm-4" style="margin-bottom: 30px;">
                     <div class="card">
-                    <!-- per ogni news inserire l'immagine qua sotto, con alt rispettivo -->
-                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news1.jpeg" alt="News titolo">
+                    <?php 
+                        $mese_n = get_the_date('m');
+                        $mese = array(
+                            '01'=>'Gennaio',
+                            '02'=>'Febbraio',
+                            '03'=>'Marzo',
+                            '04'=>'Aprile',
+                            '05'=>'Maggio',
+                            '06'=>'Giugno',
+                            '07'=>'Luglio',
+                            '08'=>'Agosto',
+                            '09'=>'Settembre',
+                            '10'=>'Ottobre',
+                            '11'=>'Novembre',
+                            '12'=>'Dicembre'
+                        );
+                        $data = get_the_date('d').' '.$mese[$mese_n].' '.get_the_date('Y');
+
+                        ?>
+                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('filos_home',array('class'=>'card-img-top')); ?></a>
                         <div class="overlay-card-img-top">
-                            <!-- qua inserire la data di quando la news è stata inserita nel db -->
-                            <div class="data-news">15 Gennaio 2018</div>
+                            <div class="data-news"><?php echo $data ?></div>
                         </div>
                         <div class="card-body">
-                            <!-- qua inserire il titolo della news -->
-                            <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
-                            <!-- qua inserire la descrizione della news, e non l'intero corpo siccome è una breve presentazione di essa -->
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <h5 class="card-title" ><?php the_title(); ?></h5>
+                            <p class="card-text"><?php the_excerpt(); ?></p>
                             <div class="scopri-di-piu">
-                                <p>Scopri di più</p>
+                                <a href="<?php the_permalink(); ?>"><p>Scopri di più</p></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4 p-5">
-                    <div class="card">
-                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news2.jpeg" alt="News titolo">
-                        <div class="overlay-card-img-top">
-                            <div class="data-news">21 Maggio 2018</div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="scopri-di-piu">
-                                <p>Scopri di più</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 p-5">
-                    <div class="card">
-                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news3.jpg" alt="News titolo">
-                        <div class="overlay-card-img-top">
-                            <div class="data-news">10 Febbraio 2018</div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="scopri-di-piu">
-                                <p>Scopri di più</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-sm-4 p-5">
-                    <div class="card">
-                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news4.jpeg" alt="News titolo">
-                        <div class="overlay-card-img-top">
-                            <div class="data-news">26 Marzo 2018</div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="scopri-di-piu">
-                                <p>Scopri di più</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 p-5">
-                    <div class="card">
-                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news5.jpeg" alt="News titolo">
-                        <div class="overlay-card-img-top">
-                            <div class="data-news">19 Gennaio 2018</div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="scopri-di-piu">
-                                <p>Scopri di più</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 p-5">
-                    <div class="card">
-                        <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news6.jpeg" alt="News titolo">
-                        <div class="overlay-card-img-top">
-                            <div class="data-news">13 Gennaio 2018</div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="scopri-di-piu">
-                                <p>Scopri di più</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php endwhile; ?>
+                
+                
             </div>
     </section>
     <!-- section news - end -->
@@ -301,7 +256,7 @@
                     <div class="row justify-content-center">
                         <div class="col-sm-12">
                             <div class="button">
-                                <a class="btn" href="#">Approfondisci</a>
+                                <a class="btn" href="./chi-siamo/">Approfondisci</a>
                             </div>
                         </div>
                     </div>
@@ -319,50 +274,51 @@
             </div>
             <div class="row justify-content-center card-row">
                 <div class="col-sm-4 p-5 card-col">
+                <a href="./sedi-e-contatti/?citta=novara">
                 <div class="card">
                     <!-- inserire di seguito l'immagine delle sede -->
                     <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news6.jpeg" alt="Foto sede Novara">
-                        <div class="sede">
-                            <!-- inserire di seguito il nome della sede -->
-                            <p>Novara</p>
-                        </div>
-                    </div>
+                        <div class="sede"><p>Novara</p></div>
+                </div></a>
                 </div>
                 <div class="col-sm-4 p-5 card-col">
+                <a href="./sedi-e-contatti/?citta=torino">
                     <div class="card">
                     <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/imgs/sedeTorino.jpg" alt="Foto sede Torino">
-                        <div class="sede">
-                            <p>Torino</p>
-                        </div>
-                    </div>
+                        <div class="sede"><p>Torino</p></div>
+                    </div></a>
                 </div>
             </div>
     </section>
     <!-- section sedi - end -->
 
-    <!-- section testimonianze - start -->
+    <!-- section testimonianze - start -->  
     <section class="testimonianze-section">
         <div class="row justify-content-center">
             <h1 class="display-3 section-title">Testimonianze</h1>    
-        </div>
+        </div>     
         <div class="row justify-content-center pt-5">
             <div class="col-sm-8">
                 <div id="carouselTestimonianze" class="carousel slide" data-ride="carousel"  data-interval="10000">
                             <div class="carousel-inner">
-                                    <div class="carousel-item active">
+                            <?php 
+                            $primo = true;
+                            query_posts('category_name=slideshow_home_commenti&posts_per_page=3');
+                            while (have_posts()) : the_post(); ?>
+                                    <div class="carousel-item <? if($primo) echo 'active'; ?>">
                                         <div class="row justify-content-center">
                                             <div class="col-sm-10">
                                                 <div class="card">
-                                                    <div class="row justify-content-center">
+                                                    <div class="row justify-content-center active">
                                                         <div class="col-sm-4">
-                                                            <img class="w-100 rounded-circle testimonial-image" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news1.jpeg" alt="Foto persona">
+                                                            <?php the_post_thumbnail('filos_home', array('class' => 'w-100 rounded-circle testimonial-image')); ?>
                                                         </div>
                                                         <div class="col-sm-8 body align-self-center">
-                                                            <p class="title">Concorso di Meccanica</p>
+                                                            <p class="title"><?php the_title(); ?></p>
                                                             <blockquote class="blockquote text-justify">
                                                                 <img class="open-quote" src="<?php echo get_template_directory_uri(); ?>/imgs/quote.png" alt="blockquote quote icon">
-                                                                    <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, minima sequi. Nihil hic vitae, nulla ullam dolor repellendus maiores, enim corrupti, accusamus aliquam cupiditate inventore. Deserunt sit minus quis enim.</span>
-                                                                    <span class="blockquote-footer"><cite title="Nome personaggio">Nome personaggio</cite></span>
+                                                                    <span class="text"><?php $str = get_the_content(); $str = substr($str,0,200).'...'; echo $str; ?></span>
+                                                                    <span class="blockquote-footer"><cite title="Nome personaggio"><?php the_field('autore_commento'); ?></cite></span>
                                                                 <img class="close-quote" src="<?php echo get_template_directory_uri(); ?>/imgs/quote.png" alt="blockquote quote icon">                                                                
                                                             </blockquote>
                                                         </div>
@@ -371,50 +327,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="carousel-item">
-                                    <div class="row justify-content-center">
-                                        <div class="col-sm-10">
-                                            <div class="card">
-                                                <div class="row justify-content-center">
-                                                    <div class="col-sm-4">
-                                                        <img class="w-100 rounded-circle testimonial-image" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news6.jpeg" alt="Foto persona">
-                                                    </div>
-                                                    <div class="col-sm-8 body align-self-center">
-                                                        <p class="title">Concorso di Meccanica</p>
-                                                        <blockquote class="blockquote text-justify">
-                                                            <img class="open-quote" src="<?php echo get_template_directory_uri(); ?>/imgs/quote.png" alt="blockquote quote icon">
-                                                                <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, minima sequi. Nihil hic vitae, nulla ullam dolor repellendus maiores, enim corrupti, accusamus aliquam cupiditate inventore. Deserunt sit minus quis enim.</span>
-                                                                <span class="blockquote-footer"><cite title="Nome personaggio">Nome personaggio</cite></span>
-                                                            <img class="close-quote" src="<?php echo get_template_directory_uri(); ?>/imgs/quote.png" alt="blockquote quote icon">                                                                
-                                                        </blockquote>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                <div class="row justify-content-center">
-                                    <div class="col-sm-10">
-                                        <div class="card">
-                                            <div class="row justify-content-center">
-                                                <div class="col-sm-4">
-                                                    <img class="w-100 rounded-circle testimonial-image" src="<?php echo get_template_directory_uri(); ?>/imgs/news/news3.jpg" alt="Foto persona">
-                                                </div>
-                                                <div class="col-sm-8 body align-self-center">
-                                                    <p class="title">Concorso di Meccanica</p>
-                                                    <blockquote class="blockquote text-justify">
-                                                        <img class="open-quote" src="<?php echo get_template_directory_uri(); ?>/imgs/quote.png" alt="blockquote quote icon">
-                                                            <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, minima sequi. Nihil hic vitae, nulla ullam dolor repellendus maiores, enim corrupti, accusamus aliquam cupiditate inventore. Deserunt sit minus quis enim.</span>
-                                                            <span class="blockquote-footer"><cite title="Nome personaggio">Nome personaggio</cite></span>
-                                                        <img class="close-quote" src="<?php echo get_template_directory_uri(); ?>/imgs/quote.png" alt="blockquote quote icon">                                                                
-                                                    </blockquote>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                <?php $primo = false; endwhile; ?>
                         </div>
                     <a class="carousel-control-prev" href="#carouselTestimonianze" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -428,9 +341,6 @@
             </div>
         </div>
     </section>
-    <!-- section testimonianze - end -->
-    
-    <!-- chiusura del container -->
     </div>
 
 <?php get_footer(); ?>
