@@ -37,11 +37,20 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 body-content">
+                        <div class="col-12 body-content col4">
                             <p class="Title">4. CONSULENZA ORIENTATIVA</p>
                             <p class="Text">
                                Sostenere l'utente che necessita di servizi di supporto per l'individuazione dell'obiettivo professionale, al fine di definire il percorso
                                utile a promuoverne attivamente l'inserimento o il reinserimento o a migliorare la posizione nel mercato.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 body-content col5">
+                            <p class="Title">5. ACCOMPAGNAMENTO AL LAVORO</p>
+                            <p class="Text">
+                                Supportare l'utente nella ricerca di un impiego e nelle attività correlate all'inserimento lavorativo o derivanti dalla necessità
+                                di migliorarne l'occupabilità ai fini dell'inserimento al lavoro mediante misure di formazione, tirocinio, stage, etc.
                             </p>
                         </div>
                     </div>

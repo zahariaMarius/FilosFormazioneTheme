@@ -8,15 +8,17 @@
   <div class="row">
       <div class="col-12">
         <div class="footer">
-        <div class="card bg-dark text-white">
-          <img id="card-img" class="card-img-footer" src="<?php echo get_template_directory_uri(); ?>/imgs/footer-01.png" alt="Card image">
+        <div class="card bg-blue">
+          <img class="card-img" src="<?php echo get_template_directory_uri(); ?>/imgs/footer-right.png" alt="Card image">
             <div class="card-img-overlay">
-              <img id="card-img" class="sfondo-logo" src="<?php echo get_template_directory_uri(); ?>/imgs/sfondo-logo.png" alt="Card image">
+              <p class="card-text">Corsi</p>
+              <p class="card-text">Chi Siamo</p>
             </div>
         </div>
+          <!-- <img  class="img-footer" src="<?php echo get_template_directory_uri(); ?>/imgs/footer-right.png"> -->
         </div>
       </div>
-  </div>
+    </div>
 
 </section>
 
